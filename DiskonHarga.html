@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menghitung Diskon</title>
+    <style type="text/css">
+        body {
+            background-image: url(gambar/A1.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 2.5em;
+        }
+        .title{
+            text-align: center;
+            font-size: 2.5em;
+            color: black;
+        }
+        main{
+            max-width: 100%;
+            margin-left: 30%;
+            border-radius: 10px 10px;
+            width: 40%;
+            height: 40%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> PENGHITUNGAN DISKON </h1>
+        <form name="Diskon">
+            <p></p>
+            Harga<br>
+            <input type="text" name="harga">
+            <p></p>
+            Persen<br>
+            <input type="text" name="persen">
+            <br>
+            <br>
+            <input type="button" name="cek" value="CEK" onclick="Cek_Diskon();">
+            <div>
+            <br>
+            Hasil Diskon<br>
+            <input type="text" name="hasil">
+            <p></p>
+            </div>
+        </form>
+        <script type="text/javascript">
+            function Cek_Diskon() { 
+                var harga = document.Diskon.harga.value; 
+                var persen = document.Diskon.persen.value; 
+                harga = parseInt(harga); 
+                persen = parseInt(persen); 
+                var hasil = harga * (persen/100); 
+                hasil = harga - parseInt(hasil); 
+                document.Diskon.hasil.value = hasil; 
+            } 
+        </script>
+    </main>
+</body>
+</html>
